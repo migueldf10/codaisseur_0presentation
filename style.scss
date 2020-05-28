@@ -1,0 +1,89 @@
+@import 'scss/normalize';
+
+:root{
+	--secondary: #c086ff;
+	--background: #abfbff;
+	font-size: 30px;
+	font-family: 'Inconsolata', monospace;
+	font-variation-settings: 'wdth' 920 ;
+	line-height: 1.8em;
+	
+}
+#miguelface{
+	position:fixed;
+	right:20px;
+	top:20px;
+	width: 400px;
+	animation-name: spin;
+    animation-duration: 8000ms;
+    animation-iteration-count: infinite;
+	animation-timing-function: linear;
+	&:hover{
+		animation-name: spin-and-jump;
+		animation-duration: 2000ms;
+		animation-iteration-count: infinite;
+		animation-timing-function: linear;
+		
+	}
+	@keyframes spin { 
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(360deg); 
+        }
+    }
+	@keyframes spin-and-jump { 
+        from { 
+            transform: rotate(0deg); 
+        } to { 
+            transform: rotate(-360deg); 
+        }
+    }
+}
+
+.hero{
+	border-top:10px solid var(--background);
+	padding-top: 200px;
+	padding-bottom: 200px;
+}
+section{
+	border-bottom: 10px solid var(--background);
+	border-left: 10px solid var(--background);
+	border-right: 10px solid var(--background);
+	background-color:var(--secondary,green);
+	padding: 60px;
+	padding-right: 480px;
+	
+}
+#contact{
+	min-height: 90vh;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+a{
+	color: inherit;
+}
+@media screen and (max-width:960px){
+	:root{
+		font-size: 25px;
+	}
+	#miguelface{
+		width:200px;
+	}
+	section{
+		padding-right:62px;
+	}
+}
+@media screen and (max-width:400px){
+	:root{
+		font-size: 18px;
+	}
+	#miguelface{
+		width:100px;
+	}
+	section{
+		padding-left:32px;
+		padding-right:32px;
+	}
+}
