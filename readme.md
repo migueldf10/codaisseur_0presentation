@@ -1,5 +1,7 @@
 # This is a presentation site for Codaisseur Full-stack bootcamp 
 
+You can visit the live site at [https://determined-jackson-2423ab.netlify.app](https://determined-jackson-2423ab.netlify.app)
+
 Tech stack
 
 - HTML hardcoded code
